@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fixer</title>
+  <link rel="stylesheet" href="MainCSS.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Fixer</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Можливості" onclick="slowScroll('#main')">Itch.io?</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Переваги">Переваги</a>
+      <a href="index.html" title="Контакти">Повернутись на головну</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Itch.io</h1>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Що являє собою платформа Itch.io?</h2>
+      <span></span>
+    </div>
+    <div class="text">
+      <span><a href="https://itch.io/" target="_blank">Itch.io</a> - це веб-сайт, призначений для розміщення, продажу та завантаження інді-відеоігор. Випущений в березні 2013 року Ліф Кoркoрaном, сайт вже має близько 100 000 ігор і предметів станом на лютий 2018 року.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Переваги платформи Itch.io:</h2>
+    <h2>• Захоплююча бібліотека маловідомих інді-ігор</h2>
+    <h2>• Багато варіантів перегляду</h2>
+    <h2>• Інструменти для розробників ігор</h2>
+    <h2>• Доброзичлива спільнота</h2>
+    <h2>• Корисні настільні додатки</h2>
+  </div>
+
+  <footer> 
+    <div id="social"> 
+    <a href="https://www.facebook.com/profile.php?id=100029136972233" title="Мій фейзбук" target="_blank">
+       <img src="images for footer/facebook.png" alt="Facebook" title="Facebook"></a>
+    <a href="https://www.instagram.com/ogonovskiy_nazar/" title="Мій інстаграм" target="_blank">
+       <img src="images for footer/instagram.png" alt="instagram" title="instagram"></a> 
+    </div>
+    <div id="rights">
+    Цей сайт не є комерційним продуктом, а лише завданням до курсової роботи &copy; 2021
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>

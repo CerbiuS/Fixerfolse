@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fixer</title>
+  <link rel="stylesheet" href="MainCSS.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Fixer</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Можливості" onclick="slowScroll('#main')">Microsoft Xbox?</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Переваги">Переваги</a>
+      <a href="index.html" title="Контакти">Повернутись на головну</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Microsoft Xbox</h1>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Що являє собою платформа Microsoft Xbox?</h2>
+      <span></span>
+    </div>
+    <div class="text">
+      <span><a href="https://store.steampowered.com/" target="_blank">Microsoft Xbox</a> - це додаток який переносить найкращі можливості консолі на комп'ютер без самої консолі. Нехай бібліотека ігор не така велика, як на консолях Xbox, але вона дає можливість грати в ігри виробництва Xbox Game Studios та деяких сторонніх виробників.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Переваги платформи Microsoft Xbox:</h2>
+    <h2>• Дозволяє купувати та в грати в деякі ігри Xbox one на комп'ютері</h2>
+    <h2>• Інтеграція з Xbox Game Pass</h2>
+    <h2>• Інтерфейс який приваблює простою навігацією</h2>
+    <h2>• Підтримка голосового чату та повідомлення Game Bar</h2>
+    <h2>• Game DVR дозволяє записувати відео</h2>
+    <h2>• Немає оплати за багатокористувацьку гру</h2>
+    <h2>• Хмарні збереження</h2>
+  </div>
+
+  <footer> 
+    <div id="social"> 
+    <a href="https://www.facebook.com/profile.php?id=100029136972233" title="Мій фейзбук" target="_blank">
+       <img src="images for footer/facebook.png" alt="Facebook" title="Facebook"></a>
+    <a href="https://www.instagram.com/ogonovskiy_nazar/" title="Мій інстаграм" target="_blank">
+       <img src="images for footer/instagram.png" alt="instagram" title="instagram"></a> 
+    </div>
+    <div id="rights">
+    Цей сайт не є комерційним продуктом, а лише завданням до курсової роботи &copy; 2021
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>

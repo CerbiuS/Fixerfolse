@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fixer</title>
+  <link rel="stylesheet" href="MainCSS.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Fixer</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Можливості" onclick="slowScroll('#main')">Humble Bundle?</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Переваги">Переваги</a>
+      <a href="index.html" title="Контакти">Повернутись на головну</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Humble Bundle</h1>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Що являє собою платформа Humble Bundle?</h2>
+      <span></span>
+    </div>
+    <div class="text">
+      <span><a href="https://www.humblebundle.com/" target="_blank">Humble Bundle</a> - це сервіс компанії Valve, відомого розробника відеоігор, який надає послуги цифрової дистрибуції, багатокористувацьких ігор і спілкування гравців. Steam використовується також для отримання автоматичних оновлень і новин, як для продуктів самої Valve, так і сторонніх розробників.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Переваги платформи Humble Bundle:</h2>
+    <h2>• Публікують оригінальні ігри</h2>
+    <h2>• Комплекти ігор та інші розваги з знижками</h2>
+    <h2>• Одна покупка працює на різних платформах</h2>
+    <h2>• Частина доходів вілправляється на благодійність</h2>
+    <h2>• Продаж ігрових кодів для консолей</h2>
+    <h2>• Сервіс підписки на ігри</h2>
+  </div>
+
+  <footer> 
+    <div id="social"> 
+    <a href="https://www.facebook.com/profile.php?id=100029136972233" title="Мій фейзбук" target="_blank">
+       <img src="images for footer/facebook.png" alt="Facebook" title="Facebook"></a>
+    <a href="https://www.instagram.com/ogonovskiy_nazar/" title="Мій інстаграм" target="_blank">
+       <img src="images for footer/instagram.png" alt="instagram" title="instagram"></a> 
+    </div>
+    <div id="rights">
+    Цей сайт не є комерційним продуктом, а лише завданням до курсової роботи &copy; 2021
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
