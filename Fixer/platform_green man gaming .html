@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fixer</title>
+  <link rel="stylesheet" href="MainCSS.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Fixer</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Можливості" onclick="slowScroll('#main')">Green Man gaming?</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Переваги">Переваги</a>
+      <a href="index.html" title="Контакти">Повернутись на головну</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Green Man Gaming</h1>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Що являє собою платформа Green Man gaming?</h2>
+      <span></span>
+    </div>
+    <div class="text">
+      <span><a href="https://www.greenmangaming.com/ru/" target="_blank">Green Man Gaming</a> — британський роздрібний продавець, розповсюджувач і видавець відеоігор. Він має багатоплатформний каталог із понад 9000 ігор від понад 1350 видавців, які продають ігри в 195 країнах через понад 140 платіжних систем у 18 валютах. 90% його доходу отримують за межами Великобританії. Видавничий підрозділ Green Man Gaming дозволяє незалежним студіям відеоігор вибирати комплекс послуг для публікації.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Переваги платформи Green Man Gaming:</h2>
+    <h2>• Продаж нових ігор</h2>
+    <h2>• Часті знижки</h2>
+    <h2>• Соціальні функції</h2>
+  </div>
+
+  <footer> 
+    <div id="social"> 
+    <a href="https://www.facebook.com/profile.php?id=100029136972233" title="Мій фейзбук" target="_blank">
+       <img src="images for footer/facebook.png" alt="Facebook" title="Facebook"></a>
+    <a href="https://www.instagram.com/ogonovskiy_nazar/" title="Мій інстаграм" target="_blank">
+       <img src="images for footer/instagram.png" alt="instagram" title="instagram"></a> 
+    </div>
+    <div id="rights">
+    Цей сайт не є комерційним продуктом, а лише завданням до курсової роботи &copy; 2021
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
